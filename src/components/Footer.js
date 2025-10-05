@@ -7,10 +7,10 @@ const Footer = () => {
       <section>
         <div className='company-info'>
           <img src={logo} alt='' />
-          <p>
+          {/*<p>
             We are a family owned Mediterranean restaurant, focused on traditional recipes served
             with a modern twist.
-          </p>
+          </p>*/}
         </div>
         <div>
           <h3>Doormat Navigation</h3>
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
         <div>
           <h3>Social Media Links</h3>
-          <ul className='social-media'>
+          <ul>
             <li>
               <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
                 Facebook

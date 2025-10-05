@@ -1,6 +1,7 @@
 import React from 'react';
 import recipes from '../Recipes';
 import Swal from 'sweetalert2';
+import icon from '../assets/cart-icon.svg';
 
 const Menu = () => {
   const handleOrder = (id) => {
@@ -35,16 +36,19 @@ const Menu = () => {
       <div className='cards'>
         {recipes.map((recipe) => (
           <div key={recipe.id} className='menu-items'>
-            <img src={recipe.image} alt='' />
+            <img src={recipe.image} alt={recipe.title} />
             <div className='menu-content'>
               <div className='headings'>
                 <h5>{recipe.title}</h5>
                 <p>{recipe.price}</p>
               </div>
-              <p>{recipe.description}</p>
-              <button className='orderbtn' onClick={() => handleOrder(recipe.id)}>
-                Order Now
-              </button>
+              <p className='menu-description'>{recipe.description}</p>
+              <div className='order-container'>
+                <button className='orderbtn' onClick={() => handleOrder(recipe.id)}>
+                  <span>Order Now</span>
+                  <img src={icon} alt='cart icon' style={{ width: '20px', height: '20px' }} />
+                </button>
+              </div>
             </div>
           </div>
         ))}
