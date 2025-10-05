@@ -38,7 +38,7 @@ const Menu = () => {
           <div key={recipe.id} className='menu-items'>
             <img src={recipe.image} alt={recipe.title} />
             <div className='menu-content'>
-              <div className='headings'>
+              <div className='heading'>
                 <h5>{recipe.title}</h5>
                 <p>{recipe.price}</p>
               </div>
